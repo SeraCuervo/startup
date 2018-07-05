@@ -1,0 +1,47 @@
+/* GRID SYSTEM */
+
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  width: 90%;
+}
+
+.column {
+  float: left;
+}
+
+.column.full {
+  width: 100%;
+}
+
+.column.two-thirds {
+  width: 66.7%;
+}
+
+.column.half {
+  width: 50%;
+}
+
+.column.third {
+  width: 33.3%;
+}
+
+.column.fourth {
+  width: 25%;
+}
+
+.column.flow-opposite {
+  float: right;
+}
+
+/* GRID SYSTEM */
+
+.header h1 {
+  text-align: center;
+}
+
+.play,
+.pause,
+.resume {
+  text-align: center;
+}
