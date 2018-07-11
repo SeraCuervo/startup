@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import idGenerator from '../lib/idGenerator';
 
 class CreateForm extends Component {
   constructor () {
@@ -7,7 +8,6 @@ class CreateForm extends Component {
       title: '',
       responsible: '',
       description: '',
-      priority: 'low'
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,10 +17,10 @@ class CreateForm extends Component {
     e.preventDefault();
     this.props.onAddMovie(this.state);
     this.setState({
+      id: idGenerator(),
       title: '',
       responsible: '',
-      description: '',
-      priority: 'low'
+      description: ''
     });
   }
 

@@ -1,11 +1,13 @@
 {
     "movies" : [
         {
+            "id" : "1",
             "title" : "Star Wars Episode IV: a new hope",
             "sinopsis" : "The ship in which Princess Leia is traveling is captured by the Imperial troops commanded by the fearsome Darth Vader. Before being caught, Leia manages to enter a message on her robot R2-D2, who, accompanied by her inseparable C-3PO, manages to escape. After landing on the planet Tattooine are captured and sold to the young Luke Skywalker, who will discover the hidden message that goes to Obi Wan Kenobi, a Jedi master whom Luke must find to save the princess.",
             "director" : "George Lucas",
             "category" : "Sci-Fy"
         },{
+            "id" : "2",
             "title" : "Star Wars Episode V: the empire strikes back",
             "sinopsis" : "Luke Skywalker, Han Solo, Princess Leia and Chewbacca face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi master's help will Luke survive when the dark side of the Force beckons him into the ultimate duel with Darth Vader.",
             "director" : "George Lucas",
