@@ -1,5 +1,7 @@
+/* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
+/* Card Movie */
 .card {
     margin: 0px auto;
     background-color: white;
@@ -19,6 +21,7 @@
     text-align: center;
     padding: 15px 20px;
     box-sizing: border-box;
+    height: 225px;
 }
 
 .card-date {
@@ -39,19 +42,7 @@
 }
 
 .card-date,
-.card-sinopsis,
-#case-title {
+.card-sinopsis,{
     color: #777;
 }
 
-#case-title {
-    position: absolute;
-    font: 18px 'Microsoft YaHei';
-    top: 10px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-}

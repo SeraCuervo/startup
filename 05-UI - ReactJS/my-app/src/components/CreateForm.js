@@ -1,4 +1,6 @@
+//import React
 import React, { Component } from 'react';
+//Library
 import idGenerator from '../lib/idGenerator';
 
 class CreateForm extends Component {
@@ -26,7 +28,6 @@ class CreateForm extends Component {
 
   handleInputChange(e) {
     const {value, name} = e.target;
-    console.log(value, name);
     this.setState({
       [name]: value
     });

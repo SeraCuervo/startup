@@ -1,4 +1,6 @@
+//import React
 import React, {Component} from 'react';
+//import Styles
 import '../EditMovie.css';
 
 class EditMovie extends Component {

@@ -5,6 +5,7 @@ body {
   background: -webkit-linear-gradient(to right, #004e92, #000428);
   background: linear-gradient(to right, #004e92, #000428);
 }
+/* Grid System */
 .grid-container {
   display: grid;
   grid-column-gap: 50px;

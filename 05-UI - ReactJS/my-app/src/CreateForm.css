@@ -1,3 +1,4 @@
+/* From Styles */
 input[type=text],textarea {
   width: 100%;
   padding: 12px;
@@ -33,6 +34,7 @@ input[type=submit]:hover {
   grid-template-columns: auto;
   padding: 10px;
 }
+/* Buttons */
 .myButton {
 	background-color:#599bb3;
 	-moz-border-radius:8px;

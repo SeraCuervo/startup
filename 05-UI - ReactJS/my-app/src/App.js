@@ -1,10 +1,10 @@
+//import React
 import React, { Component } from 'react';
 import logo from './logo.svg';
 
 // components
 import CreateForm from './components/CreateForm';
 import FavoriteMovies from './components/FavoriteMovies';
-import idGenerate from './lib/idGenerator';
 import EditMovie from './components/EditMovie';
 
 // styles
@@ -12,6 +12,7 @@ import './App.css';
 import './movies.css';
 import './CreateForm.css';
 
+//import Json of Movies
 import { movies } from './movies.json';
 
 class App extends Component {
@@ -27,6 +28,8 @@ class App extends Component {
     this._handleEditing = this._handleEditing.bind(this);
     this.ModalView = this.ModalView.bind(this);
     this.MovieEdit = this.MovieEdit.bind(this);
+    this.RemoveMovie = this.RemoveMovie.bind(this);
+
   }
 
   handleAddMovie(movie) {
@@ -64,9 +67,21 @@ class App extends Component {
       movies : dataMovies
     }) 
   }
+
+  RemoveMovie(idMovie) {
+    let auxArray = this.state.movies
+    auxArray.forEach((movie, i) => {
+      if (movie.id === idMovie) {
+        auxArray.splice(i, 1);
+      }
+    });
+    this.setState({
+      movies : auxArray
+    })
+  }
+  
   
   render() {
-    console.log(idGenerate());
     return (
       <div className="App">
         <header className="App-header">
@@ -88,7 +103,9 @@ class App extends Component {
           }
           <FavoriteMovies 
             movies={this.state.movies} 
-            _handleEdit={this._handleEditing} />
+            _handleEdit={this._handleEditing}
+            remover={this.RemoveMovie}
+          />
         </div>
       </div>
     );
