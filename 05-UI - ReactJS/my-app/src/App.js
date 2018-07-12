@@ -20,10 +20,13 @@ class App extends Component {
     this.state = {
       movies,
       id: null,
-      showModal: false
+      showModal: false,
+      movie : null
     };
     this.handleAddMovie = this.handleAddMovie.bind(this);
     this._handleEditing = this._handleEditing.bind(this);
+    this.ModalView = this.ModalView.bind(this);
+    this.MovieEdit = this.MovieEdit.bind(this);
   }
 
   handleAddMovie(movie) {
@@ -32,11 +35,34 @@ class App extends Component {
     })
   }
   _handleEditing(idMovie) {
+    let data
+    this.state.movies.forEach(movie => {
+      if (movie.id === idMovie) {
+        data = movie;
+      }
+    });
+    
     this.setState({
       id: idMovie,
-      showModal: true
+      showModal: true,
+      movie: data
     });
-
+  }
+  ModalView(boolean) {
+    this.setState({
+      showModal: boolean
+    });
+  }
+  MovieEdit(movie) {
+    let dataMovies = this.state.movies;
+    dataMovies.forEach((data, i) => {
+      if (data.id === movie.id) {
+        dataMovies[i] = movie
+      }
+    })
+    this.setState({
+      movies : dataMovies
+    }) 
   }
   
   render() {
@@ -51,8 +77,18 @@ class App extends Component {
           < CreateForm onAddMovie={this.handleAddMovie} />
         </div>
         <div className="grid-container">
-          {this.state.showModal &&  < EditMovie ModalShow={this.state.showModal}/>}
-          < FavoriteMovies movies={this.state.movies} _handleEdit={this._handleEditing} />
+          {this.state.showModal &&
+            <EditMovie 
+              movies={this.state.movies} 
+              ModalShow={this.state.showModal}
+              ModalView={this.ModalView}
+              MovieEdit={this.MovieEdit}
+              movie={this.state.movie}
+            />
+          }
+          <FavoriteMovies 
+            movies={this.state.movies} 
+            _handleEdit={this._handleEditing} />
         </div>
       </div>
     );

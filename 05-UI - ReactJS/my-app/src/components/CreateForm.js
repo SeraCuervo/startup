@@ -6,8 +6,8 @@ class CreateForm extends Component {
     super();
     this.state = {
       title: '',
-      responsible: '',
-      description: '',
+      director: '',
+      sinopsis: '',
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,8 +19,8 @@ class CreateForm extends Component {
     this.setState({
       id: idGenerator(),
       title: '',
-      responsible: '',
-      description: ''
+      director: '',
+      sinopsis: ''
     });
   }
 
@@ -31,6 +31,7 @@ class CreateForm extends Component {
       [name]: value
     });
   }
+  
 
   render() {
     return (

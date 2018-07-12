@@ -7,8 +7,7 @@ class FavoriteMovies extends Component {
     this.handleEdit = this.handleEdit.bind(this);
   }
 
-  handleEdit(id) {
-    debugger
+  handleEdit = (id) => {
     this.props._handleEdit(id);
   }
 
@@ -29,11 +28,16 @@ class FavoriteMovies extends Component {
                 </div>
                 <div className="card-footer">
                   <p>
-                    {movie.category} - {movie.director}
+                    {movie.director}
                   </p>
-                  <button id="myBtn" className="myButton" onClick={() => this.handleEdit(movie.id)} >
+                  <div className="grid-container">
+                  <button id="myBtn" className="grid-item myButton" onClick={() => this.handleEdit(movie.id)} >
                     Edit
                   </button>
+                  <button className="grid-item myButtonR">
+                    Delete
+                  </button>
+                  </div>
                 </div>
               </div>
             </div>
